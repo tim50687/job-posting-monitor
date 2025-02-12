@@ -23,14 +23,15 @@ public class JobPosting {
   @Column(nullable = false)
   private String jobTitle;
 
-  @Column(nullable = false)
+  @Column(nullable = false, length = 1000)
   private String jobUrl;
 
+  @Column(length = 500)
   private String location;
 
 
   @Column(nullable = false)
-  private LocalDateTime postedDate;
+  private String postedDate;
 
   @CreationTimestamp
   private LocalDateTime createdAt;
